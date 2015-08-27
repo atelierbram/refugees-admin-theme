@@ -7,10 +7,19 @@ module.exports = function(grunt) {
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
 
+      compass: {
+        dist: {
+          options: {
+            sassDir: 'colorscheme/assets/sass',
+            cssDir: 'colorscheme/assets/css'
+          }
+        }
+      },
+
       sass: {
         dist: {
           files: {
-                'wp-content/themes/refugees/build/refugees-admin-theme-unprefixed.css': 'wp-content/themes/refugees/assets/sass/cms/refugees-admin-theme.scss'
+           'wp-content/themes/refugees/build/refugees-admin-theme-unprefixed.css': 'wp-content/themes/refugees/assets/sass/cms/refugees-admin-theme.scss'
           }
         }
       },
@@ -50,15 +59,20 @@ module.exports = function(grunt) {
             }
         },
 
+        css: {
+        files: 'colorscheme/assets/**/*.scss',
+          tasks: ['compass']
+        },
+
       },
 
   });
 
-    grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin']);
-    grunt.registerTask('scss', ['sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('build', ['compass', 'sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('scss', ['compass', 'sass', 'autoprefixer', 'cssmin']);
     grunt.registerTask('default', ['build', 'watch']);
     grunt.registerTask('dev', ['watch']);
 
-    grunt.loadNpmTasks('grunt-contrib-copy', 'grunt-contrib-sass','grunt-contrib-watch','matchdep','grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-compass', 'grunt-contrib-sass','grunt-contrib-watch','matchdep','grunt-autoprefixer');
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };

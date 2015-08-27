@@ -10,7 +10,7 @@ Author URI: http://atelierbramdehaan.nl
 */
 
 function refugees_admin_theme_style() {
-    wp_enqueue_style('refugees-admin-theme', plugins_url('refugees-wp-admin.css', __FILE__));
+    wp_enqueue_style('refugees-admin-theme', plugins_url('refugees-admin-theme.css', __FILE__));
 }
 add_action('admin_enqueue_scripts', 'refugees_admin_theme_style');
 add_action('login_enqueue_scripts', 'refugees_admin_theme_style');
