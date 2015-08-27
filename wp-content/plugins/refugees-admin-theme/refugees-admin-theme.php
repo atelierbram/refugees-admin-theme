@@ -16,7 +16,7 @@ add_action('admin_enqueue_scripts', 'refugees_admin_theme_style');
 add_action('login_enqueue_scripts', 'refugees_admin_theme_style');
 
 function refugees_admin_footer() {
-   echo '<div class="wpfooter-svdb"><p class="alignleft">This theme was made by <a href="http://atelierbramdehaan.nl">Bram de Haan</a>, you can find the colorscheme <a href="http://github.com/atelierbram/refugees-admin-theme/colorscheme">on GitHub</a>.</p></div>';
+   echo '<div class="wpfooter-svdb"><p class="alignleft">This theme was made by <a href="http://atelierbramdehaan.nl">Bram de Haan</a>, you can find the colorscheme <a href="https://github.com/atelierbram/refugees-admin-theme">on GitHub</a>.</p></div>';
 }
 
 add_action('admin_footer', 'refugees_admin_footer');
