@@ -2,7 +2,7 @@
 
 Lightweight WordPress Admin Theme Plugin
 
-![Screenshot Refugees Admin Theme](https://atelierbram.github.io/colorscheme/assets/img/screenshot_refugees-admin-theme_800x600.png "Screenshot Refugees Admin Theme")
+![Screenshot Refugees Admin Theme](http://atelierbram.github.io/refugees-admin-theme/colorscheme/assets/img/screenshot_refugees-admin-theme_800x600.png "Screenshot Refugees Admin Theme")
 
 ### Install
 upload in plugins folder and activate in WordPress dashboard
@@ -30,7 +30,7 @@ wp-content/
 This theme depends on the webfont [Fira Sans](https://www.google.com/fonts/specimen/Fira+Sans) being available. The medium 500 weight is used for bold, and the light 300 weight is used for the light-on-dark text in the interface. The fonts are enqueued in the plugin, and pulled in from Google Webfonts.
 
 ### Colorscheme
-![Refugees colorscheme](https://atelierbram.github.io/colorscheme/assets/img/refugees-colorscheme.svg "Refugees colorscheme")
+![Refugees colorscheme](https://atelierbram.github.io/refugees-admin-theme/colorscheme/assets/img/refugees-colorscheme.svg "Refugees colorscheme")
 
 ```scss
 $base00: #203b46;
