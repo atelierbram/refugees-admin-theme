@@ -1,5 +1,5 @@
-// http://codepen.io/MadeByMike/pen/sDpxg/
-// Adapted from: https://gist.github.com/voxpelli/6304812
+// @import "compass/css3";
+
 @function luma($color){
   $rgba: red($color), green($color), blue($color);
   $rgba2: ();
@@ -42,4 +42,6 @@
   }
   @return if(lightness($color) < 51, #FFF, #000)
 }
- 
+
+// http://codepen.io/MadeByMike/pen/sDpxg/
+// Adapted from: https://gist.github.com/voxpelli/6304812
