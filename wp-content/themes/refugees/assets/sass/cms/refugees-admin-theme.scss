@@ -20,6 +20,10 @@ a:hover, a:active {
   color: adjust-color($blue, $saturation: 12%);
 }
 
+table {
+  clear: left;
+}
+
 // make more room at the bottom for footer text
 #wpbody-content {
   padding-bottom: 10em;
@@ -304,6 +308,7 @@ ul.striped > :nth-child(odd), .alternate {
 .wp-core-ui .button-primary,
 .wp-core-ui .button-secondary {
   line-height: 2.2;
+  text-shadow: none !important;
 }
 
 .pressthis-bookmarklet,
@@ -328,9 +333,9 @@ ul.striped > :nth-child(odd), .alternate {
 .wp-core-ui .button-primary:hover,
 .wp-core-ui .button-primary.focus,
 .wp-core-ui .button-primary:focus {
-  box-shadow: inset 0 1px 0 $base07, 0 1px 0 rgba( $base01, 0.08 ); 
+  box-shadow: inset 0 1px 0 $base07, 0 1px 0 rgba( $base01, 0.08 );
 }
- 
+
 .pressthis-bookmarklet:hover,
 .pressthis-bookmarklet:focus,
 .pressthis-bookmarklet:active,
@@ -395,6 +400,7 @@ h2,
 .widefat tfoot tr th,
 .widefat tfoot tr td {
   color: $dark04;
+  font-family: "Fira Sans Condensed", "Lucida Grande", "Segoe UI", Corbel, "Trebuchet MS", Verdana, sans-serif !important;
 }
 
 .ui-tabs-panel .bp-option a.delete,
@@ -491,9 +497,19 @@ h3,
   box-shadow: 0 1px 1px rgba($base00,0.04);
 }
 
-.postbox .hndle, 
+.postbox .hndle,
 .stuffbox .hndle {
   border-bottom-color: $light01;
+}
+
+.notice-success,
+div.updated {
+  border-color: $light_green;
+}
+
+.plugins .active th.check-column,
+.plugin-update-tr.active td {
+  border-left: 4px solid $blue;
 }
 
 // footer

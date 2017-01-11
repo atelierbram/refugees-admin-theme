@@ -21,15 +21,24 @@ function refugees_admin_footer() {
 
 add_action('admin_footer', 'refugees_admin_footer');
 
-// This theme depends on the webfont Fira Sans being available
+// This theme depends on the webfont Fira Sans and Fira Sans Condensed being available
 // the medium 500 weight is used for bold
 // the light 300 weight is used for the light on dark text in the interface
-function registerCustomAdminFont() {
-  $src = 'http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,400italic&amp;amp;subset=latin';
-  $handle = "customAdminFont";
+function registerCustomAdminFont1() {
+  $src = 'http://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500';
+  $handle = "customAdminFont1";
   wp_register_script($handle, $src);
   wp_enqueue_style($handle, $src, array(), false, false);
 }
-add_action('admin_head', 'registerCustomAdminFont');
+add_action('admin_head', 'registerCustomAdminFont1');
+
+// the condensed font is used for header styles in the interface
+function registerCustomAdminFont2() {
+  $src = 'http://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,500,500i';
+  $handle = "customAdminFont2";
+  wp_register_script($handle, $src);
+  wp_enqueue_style($handle, $src, array(), false, false);
+}
+add_action('admin_head', 'registerCustomAdminFont2');
 
 ?>

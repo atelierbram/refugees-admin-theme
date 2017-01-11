@@ -14,6 +14,9 @@ a {
 a:hover, a:active {
   color: #03a0e2; }
 
+table {
+  clear: left; }
+
 #wpbody-content {
   padding-bottom: 10em; }
 
@@ -258,7 +261,8 @@ ul.striped > :nth-child(odd), .alternate {
 .wp-core-ui .button,
 .wp-core-ui .button-primary,
 .wp-core-ui .button-secondary {
-  line-height: 2.2; }
+  line-height: 2.2;
+  text-shadow: none !important; }
 
 .pressthis-bookmarklet,
 .tablenav .tablenav-pages a,
@@ -337,7 +341,8 @@ h2,
 .widefat thead tr td,
 .widefat tfoot tr th,
 .widefat tfoot tr td {
-  color: #315867; }
+  color: #315867;
+  font-family: "Fira Sans Condensed", "Lucida Grande", "Segoe UI", Corbel, "Trebuchet MS", Verdana, sans-serif !important; }
 
 .ui-tabs-panel .bp-option a.delete,
 .ui-tabs-panel .field-wrapper a.deletion,
@@ -427,6 +432,14 @@ h3,
 .postbox .hndle,
 .stuffbox .hndle {
   border-bottom-color: #dce9ee; }
+
+.notice-success,
+div.updated {
+  border-color: #77c580; }
+
+.plugins .active th.check-column,
+.plugin-update-tr.active td {
+  border-left: 4px solid #119ad4; }
 
 .wpfooter-svdb {
   position: absolute;
